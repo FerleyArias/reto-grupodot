@@ -57,19 +57,18 @@ button:focus{
 
 .header {
   padding: 10px 20px;
+  flex-direction: column;
   display: flex;
-  height: 80px;
   color: white;
-  align-items: center;
+  height: 250px;
   justify-content: space-between;
 }
 .header__logo {
-  height: 40px;
+  width: 150px;
 }
 .header-link {
   color: #5B5C63;
   max-width: 11rem;
-  text-align: center;
 }
 .header-link--active {
   font-weight: bold;
@@ -97,7 +96,8 @@ button:focus{
 
 .banner {
   background-image: url("./assets/images/fondo.png");
-  height: 500px;
+  background-size: cover;
+  padding-bottom: 250px;
   position: relative;
 }
 
@@ -111,7 +111,6 @@ button:focus{
   position: relative;
   color: white;
   margin: 0 auto;
-  padding-top: 70px;
   text-align: center;
   height: min-content;
   max-width: 700px;
@@ -136,8 +135,10 @@ button:focus{
   justify-content: center;
   width: 200px;
   height: 200px;
-  right: 50px;
-  bottom: 50px;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   z-index: 10;
   text-align: center;
   color: #FFF;
@@ -197,7 +198,69 @@ button:focus{
 
 .plan {
   display: flex;
+  height: 300px;
+  max-width: 1300px;
+  width: 100%;
 }
 .plan__section {
+  padding: 10px 30px;
+  display: flex;
+  border-radius: 5px;
+  margin: 0 10px;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+}
+.plan__section--first {
+  background-color: #86878C;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+.plan__section--second {
+  width: 100%;
+  background-color: #2D9FE3;
+}
+.plan-section__text {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 20px 0;
+}
+.plan-section__tittle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.plan-section__text--center {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.plan-section__text--bottom {
+  margin: auto 0 0;
+}
 
+@media screen and (min-width: 1012px){
+  .banner__link {
+    right: 50px;
+    bottom: 50px;
+    margin: 0;
+    left: auto;
+  }
+  .banner-content {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (min-width: 632px) {
+  .header {
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+  }
+  .header-link {
+    text-align: center;
+  }
+  .banner {
+    height: 500px;
+    padding-bottom: 0;
+  }
 }
